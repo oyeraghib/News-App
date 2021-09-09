@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "NewzU"
 include ':app'
+include ':api'
