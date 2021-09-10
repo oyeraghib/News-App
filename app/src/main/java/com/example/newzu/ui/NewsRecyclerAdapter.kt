@@ -38,7 +38,9 @@ class NewsRecyclerAdapter() :
         val news = getItem(position)
 
         holder.binding.tvTitle.text = news.title
-        holder.binding.tvAuthorName.text = news.author
+        if(news.author != null) {
+            holder.binding.tvAuthorName.text = "-by "+news.author
+        }
         holder.binding.tvDescription.text = news.description
         holder.binding.ivImage.load(news.urlToImage)
 
