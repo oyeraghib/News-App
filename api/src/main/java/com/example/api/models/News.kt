@@ -1,11 +1,11 @@
-package com.example.api.module
+package com.example.api.models
 
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
-data class Article(
+data class News(
     @Json(name = "author")
     val author: String?,
     @Json(name = "content")

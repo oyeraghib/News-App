@@ -1,17 +1,14 @@
 package com.example.api.services
 
-import com.example.api.module.TopNewsResponse
-import retrofit2.Call
+import com.example.api.models.TopNewsResponse
 import retrofit2.Response
 import retrofit2.http.GET
-import retrofit2.http.Path
-import retrofit2.http.Query
 
 interface NewsAPI {
 
     @GET("top-headlines?country=in")
-    fun getTopHeadlinesIndia() : Call<TopNewsResponse>
+    suspend fun getTopHeadlinesIndia() : Response<TopNewsResponse>
 
     @GET("top-headlines?country=us")
-    fun getTopHeadlinesUS(): Call<TopNewsResponse>
+    suspend fun getTopHeadlinesUS(): Response<TopNewsResponse>
 }

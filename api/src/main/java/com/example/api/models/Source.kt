@@ -1,4 +1,4 @@
-package com.example.api.module
+package com.example.api.models
 
 
 import com.squareup.moshi.Json
