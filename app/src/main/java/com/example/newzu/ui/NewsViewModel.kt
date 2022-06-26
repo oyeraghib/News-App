@@ -4,11 +4,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.api.models.News
 import com.example.newzu.data.NewsRepository
+import com.example.newzu.models.News
 import kotlinx.coroutines.launch
 
-class NewsViewModel: ViewModel() {
+class NewsViewModel : ViewModel() {
 
     private val repo = NewsRepository()
 
@@ -16,7 +16,7 @@ class NewsViewModel: ViewModel() {
 
     val news: LiveData<List<News>> = _news
 
-    fun fetchTopHeadlines(){
+    fun fetchTopHeadlines() {
         viewModelScope.launch {
             _news.postValue(repo.getTopHeadlines())
         }

@@ -1,7 +1,7 @@
 package com.example.newzu.data
 
-import com.example.api.NewsAPIClient
-import com.example.api.models.News
+import com.example.newzu.NewsAPIClient
+import com.example.newzu.models.News
 
 class NewsRepository {
 

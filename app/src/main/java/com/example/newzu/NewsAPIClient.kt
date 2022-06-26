@@ -1,6 +1,6 @@
-package com.example.api
+package com.example.newzu
 
-import com.example.api.services.NewsAPI
+import com.example.newzu.services.NewsAPI
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -14,7 +14,7 @@ object NewsAPIClient {
 
     private val interceptor = Interceptor { chain ->
         val url = chain.request()
-            .url()
+            .url
             .newBuilder()
             .addQueryParameter("country", "in")
             .addQueryParameter("apiKey", API_KEY)

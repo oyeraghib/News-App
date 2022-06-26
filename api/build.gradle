@@ -11,23 +11,6 @@ java {
 
 dependencies {
 
-    //Retrofit
-    api "com.squareup.retrofit2:retrofit:$retrofit_version"
-
-    //Moshi
-    implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"
-
-    //Converter
-    implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
-
-    //Moshi Codegen
-    kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshi_version"
-
-    //test
-    testImplementation "junit:junit:$junit_version"
-
-    //coroutine
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_version"
 
 
 
