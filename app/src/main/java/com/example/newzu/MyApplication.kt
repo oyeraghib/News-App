@@ -1,9 +1,11 @@
 package com.example.newzu
 
 import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
 import io.requestly.android.core.Requestly
 
-class HomeActivity: Application() {
+@HiltAndroidApp
+class MyApplication: Application() {
 
     override fun onCreate() {
         super.onCreate()

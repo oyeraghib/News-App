@@ -1,21 +1,20 @@
 package com.example.newzu
 
+import com.example.newzu.di.AppModule
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertNotNull
 import org.junit.Test
 
 class NewsAPITest {
 
-    val resp = NewsAPIClient.api
-
-    @Test
-    fun `get Top Headlines INDIA`() {
-
-        runBlocking {
-            val req = resp.getTopHeadlines()
-            assertNotNull(req.body()?.articles)
-        }
-    }
+//    @Test
+//    fun `get Top Headlines INDIA`() {
+//
+//        runBlocking {
+//            val req =
+//            assertNotNull(req.body()?.articles)
+//        }
+//    }
 }
 
 

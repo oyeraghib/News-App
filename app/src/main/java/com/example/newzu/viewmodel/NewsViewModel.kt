@@ -1,4 +1,4 @@
-package com.example.newzu.ui
+package com.example.newzu.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -6,11 +6,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.newzu.data.NewsRepository
 import com.example.newzu.models.News
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class NewsViewModel : ViewModel() {
-
-    private val repo = NewsRepository()
+@HiltViewModel
+class NewsViewModel @Inject constructor(val repo: NewsRepository): ViewModel() {
 
     private val _news = MutableLiveData<List<News>>()
 
@@ -21,5 +22,4 @@ class NewsViewModel : ViewModel() {
             _news.postValue(repo.getTopHeadlines())
         }
     }
-
 }

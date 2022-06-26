@@ -111,6 +111,10 @@ dependencies {
     implementation "com.google.dagger:hilt-android:2.38.1"
     kapt "com.google.dagger:hilt-android-compiler:2.38.1"
 
+    //Paging
+    implementation "androidx.paging:paging-runtime-ktx:3.1.1"
+
+
 }
 
 // Allow references to generated code
