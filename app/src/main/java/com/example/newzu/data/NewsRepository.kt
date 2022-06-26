@@ -5,7 +5,7 @@ import com.example.api.models.News
 
 class NewsRepository {
 
-    val api = NewsAPIClient.api
+    private val api = NewsAPIClient.api
 
     suspend fun getTopHeadlines(): List<News>? {
 
