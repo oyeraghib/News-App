@@ -9,8 +9,8 @@ import java.util.concurrent.TimeUnit
 
 object NewsAPIClient {
 
-    const val API_KEY = "37b269514ab74f81b6d27b686ffec935"
-    const val BASE_URL = "https://newsapi.org/v2/"
+    private const val API_KEY = "37b269514ab74f81b6d27b686ffec935"
+    private const val BASE_URL = "https://newsapi.org/v2/"
 
     private val interceptor = Interceptor { chain ->
         val url = chain.request()
