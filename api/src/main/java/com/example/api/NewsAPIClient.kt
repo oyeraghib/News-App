@@ -12,13 +12,13 @@ object NewsAPIClient {
     const val API_KEY = "37b269514ab74f81b6d27b686ffec935"
     const val BASE_URL = "https://newsapi.org/v2/"
 
-    val interceptor = Interceptor { chain ->
-    val url = chain.request()
-        .url()
-        .newBuilder()
-        .addQueryParameter("country", "in")
-        .addQueryParameter("apiKey", API_KEY)
-        .build()
+    private val interceptor = Interceptor { chain ->
+        val url = chain.request()
+            .url()
+            .newBuilder()
+            .addQueryParameter("country", "in")
+            .addQueryParameter("apiKey", API_KEY)
+            .build()
 
         val request = chain.request()
             .newBuilder()
@@ -29,19 +29,19 @@ object NewsAPIClient {
 
     }
 
-    val okHttpClient = OkHttpClient.Builder()
+    private val okHttpClient = OkHttpClient.Builder()
         .addInterceptor(interceptor)
         .connectTimeout(2, TimeUnit.MINUTES)
         .readTimeout(2, TimeUnit.MINUTES)
         .build()
 
 
-    val retrofit = Retrofit.Builder()
+    private val retrofit = Retrofit.Builder()
         .client(okHttpClient)
         .baseUrl(BASE_URL)
         .addConverterFactory(MoshiConverterFactory.create())
 
-    val api = retrofit
+    val api: NewsAPI = retrofit
         .build()
         .create(NewsAPI::class.java)
 }

@@ -8,7 +8,6 @@ interface NewsAPI {
 
     @GET("top-headlines")
     suspend fun getTopHeadlines(
-//        @Query("country") country: String
     ) : Response<TopNewsResponse>
 
 }
