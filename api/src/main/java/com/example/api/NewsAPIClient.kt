@@ -16,6 +16,7 @@ object NewsAPIClient {
     val url = chain.request()
         .url()
         .newBuilder()
+        .addQueryParameter("country", "in")
         .addQueryParameter("apiKey", API_KEY)
         .build()
 

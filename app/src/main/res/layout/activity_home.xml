@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingConstraints"
+    >
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="TOP HEADLINES"
+      android:textStyle="bold"
+      tools:layout_editor_absoluteY="72dp"
+      tools:layout_editor_absoluteX="0dp"
+      android:gravity="center"
+      android:textSize="32sp"
+      android:textColor="@color/black"
+      android:fontFamily="sans-serif"
+      />
+  <Button
+      android:id="@+id/btnIndia"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="India"
+      android:textSize="16sp"
+      tools:layout_editor_absoluteY="142dp"
+      app:layout_constraintStart_toStartOf="parent"
+      android:layout_marginStart="92dp"
+      />
+  <Button
+      android:id="@+id/btnUSA"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="USA"
+      android:textSize="16sp"
+      tools:layout_editor_absoluteY="142dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginEnd="96dp"
+      />
+  <Button
+      android:id="@+id/btnNewZealand"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="New Zealand"
+      android:textSize="16sp"
+      tools:layout_editor_absoluteY="222dp"
+      tools:layout_editor_absoluteX="227dp"
+      />
+  <Button
+      android:id="@+id/btnKorea"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="South Korea"
+      android:textSize="16sp"
+      tools:layout_editor_absoluteY="222dp"
+      app:layout_constraintStart_toStartOf="parent"
+      android:layout_marginStart="28dp"
+      />
+  <Button
+      android:id="@+id/btnJapan"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Japan"
+      android:textSize="16sp"
+      tools:layout_editor_absoluteY="296dp"
+      tools:layout_editor_absoluteX="227dp"
+      />
+  <Button
+      android:id="@+id/btnRussia"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Russia"
+      android:textSize="16sp"
+      tools:layout_editor_absoluteY="296dp"
+      tools:layout_editor_absoluteX="85dp"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

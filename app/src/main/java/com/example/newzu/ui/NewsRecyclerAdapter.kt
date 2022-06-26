@@ -11,7 +11,7 @@ import coil.load
 import com.example.api.models.News
 import com.example.newzu.databinding.ListItemNewsBinding
 
-class NewsRecyclerAdapter() :
+class NewsRecyclerAdapter :
     ListAdapter<News, NewsRecyclerAdapter.NewsViewHolder>(NewsDiffCallback()) {
 
     class NewsViewHolder(val binding: ListItemNewsBinding) : RecyclerView.ViewHolder(binding.root)
@@ -21,7 +21,7 @@ class NewsRecyclerAdapter() :
             return oldItem == newItem
         }
 
-        @SuppressLint("DiffUtilEquals")
+         @SuppressLint("DiffUtilEquals")
         override fun areContentsTheSame(oldItem: News, newItem: News): Boolean {
             return newItem === oldItem
         }
@@ -45,4 +45,9 @@ class NewsRecyclerAdapter() :
         holder.binding.ivImage.load(news.urlToImage)
 
     }
+
+    data class NewsEpoxyModel(
+        val news: News
+
+    )
 }

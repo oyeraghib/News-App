@@ -17,11 +17,9 @@ class NewsViewModel: ViewModel() {
     val news: LiveData<List<News>> = _news
 
     fun fetchTopHeadlines(){
-
         viewModelScope.launch {
             _news.postValue(repo.getTopHeadlines())
         }
     }
-
 
 }

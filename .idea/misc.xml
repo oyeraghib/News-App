@@ -3,11 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Android Open Source/NewzU/app/src/main/res/layout/activity_main.xml" value="0.2164855072463768" />
+        <entry key="..\:/Android Open Source/NewzU/app/src/main/res/layout/activity_home.xml" value="0.2" />
+        <entry key="..\:/Android Open Source/NewzU/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Android Open Source/NewzU/app/src/main/res/layout/activity_news.xml" value="0.2164855072463768" />
         <entry key="..\:/Android Open Source/NewzU/app/src/main/res/layout/fragment_news.xml" value="0.2164855072463768" />
         <entry key="..\:/Android Open Source/NewzU/app/src/main/res/layout/list_item_adapter.xml" value="0.4" />
-        <entry key="..\:/Android Open Source/NewzU/app/src/main/res/layout/list_item_news.xml" value="0.2164855072463768" />
+        <entry key="..\:/Android Open Source/NewzU/app/src/main/res/layout/list_item_news.xml" value="0.4" />
       </map>
     </option>
   </component>

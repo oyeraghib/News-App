@@ -9,7 +9,7 @@ class NewsRepository {
 
     suspend fun getTopHeadlines(): List<News>? {
 
-        val response = api.getTopHeadlinesIndia()
+        val response = api.getTopHeadlines()
         return response.body()?.articles
     }
 }

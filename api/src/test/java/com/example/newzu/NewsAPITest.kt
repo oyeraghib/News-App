@@ -13,23 +13,12 @@ class NewsAPITest {
 fun `get Top Headlines INDIA` () {
 
         runBlocking {
-            val req = resp.getTopHeadlinesIndia()
+            val req = resp.getTopHeadlines()
             assertNotNull(req.body()?.articles)
         }
-
-
+}
 }
 
-    @Test
-    fun `get Top Headlines USA`() {
 
-        runBlocking {
-            val req = resp.getTopHeadlinesUS()
-            assertNotNull(req.body()?.articles)
-        }
+// Country codes <!-- in- India, us- USA, ru- Russia, kr- Korea, jp- Japan, nz- NewZealand -->
 
-
-
-    }
-
-}
