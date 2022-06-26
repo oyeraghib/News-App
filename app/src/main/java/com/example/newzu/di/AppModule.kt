@@ -1,10 +1,14 @@
 package com.example.newzu.di
 
+import android.content.Context
 import com.example.newzu.services.NewsAPI
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import io.requestly.android.okhttp.api.RQCollector
+import io.requestly.android.okhttp.api.RQInterceptor
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -38,11 +42,18 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideHttp(interceptor: Interceptor) = OkHttpClient.Builder()
-        .addInterceptor(interceptor)
-        .connectTimeout(2, TimeUnit.MINUTES)
-        .readTimeout(2, TimeUnit.MINUTES)
-        .build()
+    fun provideHttp(@ApplicationContext appContext: Context, interceptor: Interceptor): OkHttpClient {
+
+        val collector = RQCollector(context=appContext)
+        val rqInterceptor = RQInterceptor.Builder(appContext).collector(collector).build()
+        return OkHttpClient.Builder()
+
+            .addInterceptor(interceptor)
+            .addInterceptor(rqInterceptor)
+            .connectTimeout(2, TimeUnit.MINUTES)
+            .readTimeout(2, TimeUnit.MINUTES)
+            .build()
+    }
 
 
     @Provides
